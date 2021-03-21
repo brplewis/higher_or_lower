@@ -14,6 +14,9 @@ to be higher or lower.
 
 // Player and Game Variables 
 
+// Line break used to split rounds visually
+string line_break = "========================================";
+
 // Number of correct answers
 int num_correct = 0;
 
@@ -84,7 +87,7 @@ bool check_cards(int previous_card, int current_card, char player_guess) {
 }
 
 bool play_round() {
-    cout << "========================================" << endl;
+    cout << line_break << endl;
     if (previous_card == 0) {
         // Draw initial card 
         previous_card = draw_card();
@@ -129,7 +132,7 @@ int main() {
                     } else {
                         cout << "." << endl;
                     } 
-                    cout << "========================================" << endl;
+                    cout << line_break << endl;
                     player_lost = true;
                 }
         } else {
